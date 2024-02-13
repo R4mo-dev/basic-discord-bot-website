@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Botumuz</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="loader-wrapper">
+    <div class="loader"></div>
+    <p class="loading-text">Yükleniyor... <span class="loading-percentage">0%</span></p>
+  </div>
+ <div class="wrapper">
+        <header class="header">
+            <nav class="navbar">
+                <div class="logo">R4mo-dev</div>
+                <ul class="nav-links">
+                    <li><a href="#">Ana Sayfa</a></li>
+                    <li><a href="commands.html">Komutlar</a></li>
+                </ul>
+            </nav>
+            <div class="hero">
+                <h1>Bir Sonraki Seviyeye Taşıyın</h1>
+                <p>Sunucunuzu canlandırmak için güçlü özellikler ve eğlenceli etkileşimler.</p>
+                <a href="#" class="hero-button">Hemen Başla</a>
+            </div>
+        </header>
+        <main>
+            <section class="features">
+                <h2>Öne Çıkan Özellikler</h2>
+                <div class="cards">
+                    <article class="card">
+                        <h3>Yüksek Performans</h3>
+                        <p>Botumuz, hızlı ve güvenilir bir şekilde çalışır.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Kolay Kullanım</h3>
+                        <p>Kullanıcı dostu komutlar ile kolayca yönetin.</p>
+                    </article>
+                    
+                  <article class="card">
+                        <h3>Özelleştirilebilir</h3>
+                        <p>Sunucunuza özel ayarlamalar yapın.</p>
+                    </article>
+                </div>
+            </section>
+            <section class="testimonial">
+                <h2>Kullanıcı Yorumları</h2>
+                <p>"Bu bot, sunucumuzun atmosferini tamamen değiştirdi!" - Discord Kullanıcısı</p>
+            </section>
+        </main>
+        <footer class="footer">
+            <p>&copy; 2023 Discord Botumuz. Tüm hakları saklıdır.</p>
+        </footer>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+  <script>
+document.addEventListener('DOMContentLoaded', function () {
+    const loadingPercentage = document.querySelector('.loading-percentage');
+    let percentage = 0;
+    
+    const interval = setInterval(() => {
+        percentage++;
+        loadingPercentage.textContent = percentage + '%';
+        
+        if (percentage >= 100) {
+            clearInterval(interval);
+            document.querySelector('.loader-wrapper').style.display = 'none';
+        }
+    }, 30); // Bu değer gerçek yükleme sürecinize bağlı olarak ayarlanmalıdır.
+});
+  </script>
+
+
+  
+  </html>
+  

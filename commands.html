@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Botumuzun Komutları</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="loader-wrapper">
+    <div class="loader"></div>
+    <p class="loading-text">Yükleniyor... <span class="loading-percentage">0%</span></p>
+  </div>
+    <div class="wrapper">
+        <header class="header">
+            <nav class="navbar">
+                <div class="logo">R4mo-dev</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Ana Sayfa</a></li>
+<li><a href="commands.html">Komutlar</a></li>
+                </ul>
+            </nav>
+            <div class="hero">
+                <h1>Bot Komutları</h1>
+                <p>Botumuzun sunduğu tüm özellikleri ve komutları keşfedin.</p>
+            </div>
+        </header>
+        <main>
+            <section class="features">
+                <h2>Genel Komutlar</h2>
+                <div class="cards">
+                    <!-- Komut Kartı Örneği -->
+                    <article class="card2">
+                        <h3>!yardım</h3>
+                        <p>Botun tüm komutlarını listeler.</p>
+                    </article>
+                    <!-- Daha fazla komut kartı eklenecek -->
+                </div>
+                <h2>Oyun Komutları</h2>
+                <div class="cards">
+                    <!-- Oyun Komutları için Kartlar -->
+                </div>
+                <!-- Daha fazla komut kategorisi eklenebilir -->
+            </section>
+        </main>
+        <footer class="footer">
+            <p>&copy; 2023 Discord Botumuz. Tüm hakları saklıdır.</p>
+        </footer>
+    </div>
+</body>
+    <script>
+document.addEventListener('DOMContentLoaded', function () {
+    const loadingPercentage = document.querySelector('.loading-percentage');
+    let percentage = 0;
+    
+    const interval = setInterval(() => {
+        percentage++;
+        loadingPercentage.textContent = percentage + '%';
+        
+        if (percentage >= 100) {
+            clearInterval(interval);
+            document.querySelector('.loader-wrapper').style.display = 'none';
+        }
+    }, 30); // Bu değer gerçek yükleme sürecinize bağlı olarak ayarlanmalıdır.
+});
+  </script>
+</html>
